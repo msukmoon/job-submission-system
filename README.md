@@ -4,20 +4,20 @@
 
 This is a job submission system for Linux. A client could submit jobs with setting options, and a server in a same system will execute these jobs asynchronously and report their status. A client could also issue various commands to the server to list one or all jobs, get an output of an old job, get a job status, get an exit code of a job, kill, terminate, suspend or continue a job, update nice value of a job and set a CPU running time limit, memory/stack size limit or nice value of a new job. The server could be launched with setting a maximum number of jobs that could be run concurrently.
 
-For example, a server will list all jobs when a client issues the command ```./client --list all```.
+For example, a server will list all jobs when a client issues the command ```./client --list all```:
 
-```shell
-PID		PNAME	STATUS	ETCODE	NICEVL	TMELIM	MEMLIM  
-2195	sleep	KILLED	137		10		100000	1000000000  
-2190	sleep	COMPLED	0		15		100000	1000000000  
-2188	ls		COMPLED	0		10		100000	1000000000  
-2160	sleep	RUNNING	-1		12		400000	2000000000  
-2158	cat		COMPLED	0		10		100000	1000000000  
-2156	rm		COMPLED	0		10		30000	1000000000  
-2154	ls		COMPLED	0		10		100000	100000000  
-2150	mkdir	COMPLED	0		10		100000	1000000000  
-2148	pwd		COMPLED	0		10		100000	300000000  
-2143	echo	COMPLED	0		10		5000	1000000000
+```
+PID     PNAME   STATUS  ETCODE  NICEVL  TMELIM  MEMLIM  
+2195    sleep   KILLED  137     10      100000  1000000000  
+2190    sleep   COMPLED 0       15      100000  1000000000  
+2188    ls      COMPLED 0       10      100000  1000000000  
+2160    sleep   RUNNING -1      12      400000  2000000000  
+2158    cat     COMPLED 0       10      100000  1000000000  
+2156    rm      COMPLED 0       10      30000   1000000000  
+2154    ls      COMPLED 0       10      100000  100000000  
+2150    mkdir   COMPLED 0       10      100000  1000000000  
+2148    pwd     COMPLED 0       10      100000  300000000  
+2143    echo    COMPLED 0       10      5000    1000000000
 ```
 
 ## Getting Started
